@@ -1,0 +1,99 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*this makes sudo elements go before what is in the * style*/
+*:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  position: relative;
+}
+
+.component {
+  position: absolute;
+  top: 150px;
+  left: 150px;
+  background: #333;
+  width: 250px;
+  color: #FFF;
+  border-radius: 10px;
+  font-family: 'Arial', sans-serif;
+  font-size: 11px;
+}
+
+.component .header {
+  background: #111;
+  text-align: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 3px;
+  text-transform: uppercase;
+}
+
+.component .content {
+  height: 80px;
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.component .emote {
+  float: left;
+  margin-right: 10px;
+}
+
+.component .tags {
+  overflow-y: scroll;
+  height: 100%;
+}
+
+.component .tag {
+  color: #888;
+}
+
+.component .tag:before {
+  content: "#";
+}
+
+.component .bignumber {
+  position: absolute;
+  color: #222;
+  right: 30px;
+  top: 15%;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.component .footer {
+  background: #37493d;
+  border-radius: 10px;
+  padding: 2px 8px;
+}
+
+.component .comment {
+  float: left;
+  width: 30%;
+}
+
+.component .time {
+  float: left;
+  width: 50%;
+  text-align: center;
+}
+
+.component .link {
+  float: left;
+  width: 20%;
+  text-align: right;
+}
+
+.component .footer:after,
+.component .content:after {
+  content: "";
+  display: block;
+  clear: both;
+}

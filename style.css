@@ -1,10 +1,9 @@
-* {
+{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-/*this makes sudo elements go before what is in the * style*/
 *:before, *:after {
   box-sizing: inherit;
 }
@@ -15,8 +14,8 @@ body {
 
 .component {
   position: absolute;
-  top: 150px;
-  left: 150px;
+  top: 100px;
+  left: 100px;
   background: #333;
   width: 250px;
   color: #FFF;
@@ -25,12 +24,13 @@ body {
   font-size: 11px;
 }
 
+
 .component .header {
   background: #111;
   text-align: center;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  padding: 3px;
+  padding: 2px;
   text-transform: uppercase;
 }
 
@@ -41,7 +41,7 @@ body {
   overflow: hidden;
 }
 
-.component .emote {
+.component .emote{
   float: left;
   margin-right: 10px;
 }
@@ -55,8 +55,8 @@ body {
   color: #888;
 }
 
-.component .tag:before {
-  content: "#";
+.component .tag:before{
+  content: "# ";
 }
 
 .component .bignumber {
@@ -91,9 +91,10 @@ body {
   text-align: right;
 }
 
+/*CLEARFIX*/
 .component .footer:after,
 .component .content:after {
   content: "";
-  display: block;
+  display:block;
   clear: both;
 }
